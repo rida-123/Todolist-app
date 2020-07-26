@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-app</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .pera{
+      font-size: 18px;
+      color: black;
+      font-style: italic;
+      background-image: linear-gradient(to right,white , #6AF7F1);
+width: 500px;
+      padding: 15px;
+      text-align: left;
+      margin: 0 auto;
+   list-style-type: none;
+   margin-top: 10px;
+   font-weight: bold;
+   
+ 
+    }  
+    .deletebtn{
+      background-color:red;
+      color: white;
+      font-size: 14px;
+    padding: 5px;
+    margin-left: 4px;
+  float: right;
+  font-weight: bold;
+  
+    
+    }
+    .deletebtn:hover{
+background-color: black;
+color: red;
+    }
+    .editbtn{
+      background-color: green;
+      color: white;
+      font-size: 14px;
+    padding: 5px;
+     float: right;
+     font-weight: bold;
+     
+    }
+    .editbtn:hover{
+      background-color: black;
+      color: green;
+    }
+    @media screen and (max-width: 360px) {
+      .pera{
+      font-size: 18px;
+      color: black;
+      font-style: italic;
+      background-image: linear-gradient(to right,white , #6AF7F1);
+width: 280px;
+      padding: 15px;
+      text-align: left;
+      margin: 0 auto;
+   list-style-type: none;
+   margin-top: 10px;
+   font-weight: bold;
+   
+ 
+    }
+    }
+    @media screen and (max-width: 360px) {
+      .deletebtn{
+      background-color:red;
+      color: white;
+      font-size: 10px;
+    padding: 5px;
+    margin-left: 4px;
+  float: right;
+  font-weight: bold;
+      }
+    
+    }
+    @media screen and (max-width: 360px) {
+      .editbtn{
+      background-color: green;
+      color: white;
+      font-size: 10px;
+    padding: 5px;
+     float: right;
+     font-weight: bold;
+     
+    }
+  }
+    </style>
+</head>
+
+<body>
+   <div class="main">
+       <h1>Todo-list</h1>
+<h1 class="glow" id="head"></h1>
+   </div>
+   <br><br><br>
+ 
+   <div class="form-control">
+
+    <input type="text" id="todo-item" size="20" maxlength="45"  required />
+    <label>Add Item</label>
+
+
+<button class="btn" onclick="additem()" ><i class="fa fa-plus"></i></button>
+<button class="btn1" onclick="deleteall()"><i class="fa fa-trash"></i></button>
+
+</div>
+
+   
+    <br>
+    
+
+    <div >
+    <ul id="list">
+    </ul>
+    </div>
+
+</body>
+<script src="app.js"></script>
+</html>
